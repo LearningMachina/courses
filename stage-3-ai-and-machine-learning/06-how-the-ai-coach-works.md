@@ -12,7 +12,7 @@ The robot's AI coach is itself an AI system — a local LLM augmented with this 
 - Evaluating a model: how do you know if it's teaching well?
 - How to contribute a new lesson so the coach learns it too
 
-## Example
+## Code
 
 ```
 RAG pipeline (what the coach uses):
@@ -70,7 +70,7 @@ def ask_coach(question: str) -> str:
 print(ask_coach("What is PWM and why does the robot use it?"))
 ```
 
-## Exercise
+## Action
 
 1. Index the `courses/` directory into ChromaDB using the snippet above.
 2. Query it with five questions from different stages and evaluate whether the retrieved passages are relevant.
@@ -78,10 +78,18 @@ print(ask_coach("What is PWM and why does the robot use it?"))
 4. Write a simple evaluation script: 10 questions with expected keywords; score how many answers contain them.
 5. Add a new 100-word lesson about a topic you know, index it, and confirm the coach can answer questions about it.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between RAG and fine-tuning? When would you use each?
 - What does the system prompt do, and what happens if you remove it?
 - How would you measure whether the coach is getting *better* at teaching over time?
+
+## Extension
+
+Modify the coaching system to change how the robot teaches:
+
+1. Add 5 new lesson paragraphs on a topic you know well and re-index the vector database — ask the robot about your topic and observe whether it gives grounded answers.
+2. Change the number of retrieved passages (top-k) from 3 to 1 and then 10 — observe how the robot's answers change: too few and it guesses, too many and it gets confused.
+3. Swap the LLM model used for generation (keep the same RAG pipeline) — the robot's teaching style changes while its knowledge stays the same. Architecture and personality are separate.

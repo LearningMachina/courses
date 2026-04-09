@@ -1,4 +1,4 @@
-# Stage 1 Project — Live Sensor API
+# Stage 1 Mission — Live Sensor API
 
 ## Goal
 
@@ -32,7 +32,7 @@ stage1-project/
 - Display a simple bar graph of sensor values using plain HTML/CSS (no framework needed).
 - Write a Python client script (`client.py`) that connects to the WebSocket and logs readings to a CSV file.
 
-## Check
+## Reflection
 
 Demo the running server to the robot and explain:
 

@@ -1,28 +1,123 @@
-# LearningMachina — Course Curriculum
+# LearningMachina — Embodied Curriculum
 
 A structured path from complete beginner to autonomous robot builder.
+
+Unlike traditional courses, LearningMachina does not separate theory from practice.
+**Everything the student learns directly controls the robot — and creates visible, physical behavior.**
+
+The robot is not just a tool.
+It is the **medium of learning**.
+
 All material is designed to be taught interactively by the robot itself —
 ask it anything, at any point, and it will explain, demonstrate, and guide you.
 
 ---
 
+## Core Learning Principle
+
+> **Code is not an abstract concept — it is behavior.**
+
+Every concept the student learns results in:
+- Movement
+- Reaction
+- Interaction
+- Decision-making
+
+The student does not just write code.
+They **teach the robot how to behave**.
+
+---
+
 ## Lesson Format
 
-Every lesson follows the same structure so the robot knows how to teach it:
+Every lesson follows a consistent, embodied structure:
 
-1. **Concept** — the robot explains the idea in 2–3 sentences
-2. **Example** — a short code snippet or diagram
-3. **Exercise** — the student tries it on the robot itself
-4. **Check** — the student explains it back; the robot gives feedback
+1. **Concept**
+   The robot explains the idea in 2–3 simple sentences.
+
+2. **Code**
+   The student writes or modifies a small piece of code using the robot's SDK.
+
+3. **Action (Physical Feedback)**
+   The robot executes the code immediately:
+   - Moves
+   - Speaks
+   - Lights up
+   - Reacts to the environment
+
+4. **Reflection**
+   The student explains what changed in the robot's behavior.
+
+5. **Extension**
+   The student modifies the code to change the robot's behavior again.
 
 All lessons are plain Markdown files. The robot's LLM reads them as context,
 so the student can ask any follow-up question and get a grounded answer.
 
 ---
 
-## Stage 0 — Linux & the Machine
+## The Robot SDK (Core Abstraction)
 
-*Get comfortable with the environment. Everything else builds on this.*
+All programming languages use a unified, simple interface to control the robot.
+
+Students do not start with abstract programming problems.
+They start by **controlling a physical system**.
+
+This allows:
+- Immediate feedback
+- Intuitive understanding
+- Cross-language consistency (Python, C++, Rust)
+
+---
+
+## Learning Model
+
+Instead of:
+> Theory → Exercises → Tests
+
+LearningMachina uses:
+> **Behavior → Understanding → Control**
+
+Students learn by:
+- Observing what the robot does
+- Changing code and seeing different outcomes
+- Building increasingly complex behaviors
+
+---
+
+## Behavioral Tracks
+
+In parallel to the main progression, students develop skills across three tracks:
+
+### Movement
+- Navigation
+- Precision control
+- Smooth motion
+
+### Interaction
+- Voice responses
+- Visual detection
+- Human interaction
+
+### Intelligence
+- Decision-making
+- Learning from data
+- Autonomous behavior
+
+---
+
+## Stage 0 — Environment & First Control
+
+*Make the robot come alive.*
+
+Students learn the basics of Linux, terminal usage, files, and processes —
+but every interaction has a **physical result**:
+- Running a script → robot reacts
+- Loop → repeated movement or signal
+- Command → visible output on the robot
+
+> **Stage Goal:**
+> Understand that commands on a computer can directly control a machine.
 
 **The Linux command line**
 - What is an operating system? What makes Linux different?
@@ -48,14 +143,24 @@ so the student can ask any follow-up question and get a grounded answer.
 - Python environment: what a virtual environment is and why to use one
 - Running your first Python script on the robot
 
-> **Stage 0 project:** Write a bash script that prints the robot's CPU temperature,
-> battery level, and a greeting message every 5 seconds.
+> **Stage 0 mission:** Write a bash script that makes the robot report its
+> vital signs — CPU temperature, battery level, and a spoken greeting —
+> every 5 seconds. Observe the robot come alive on every loop iteration.
 
 ---
 
-## Stage 1 — Programming
+## Stage 1 — Programming as Behavior
 
-*Learn to think like a computer. Write real code that runs on the robot.*
+*Learn to think like a computer — by controlling a robot.*
+
+Each concept is tied to behavior:
+- Changing a variable changes movement
+- Conditions create reactions
+- Loops create patterns
+- Functions create reusable behaviors
+
+> **Stage Goal:**
+> Understand that code defines how a system behaves over time.
 
 **Python basics** (start here)
 - Variables, data types, operators
@@ -99,14 +204,28 @@ so the student can ask any follow-up question and get a grounded answer.
 - Building a minimal web dashboard for your robot's sensor data
 - Node.js in one lesson: when to use JavaScript on the backend
 
-> **Stage 1 project:** Build a Python web server that exposes the robot's
+> **Stage 1 mission:** Build a Python web server that exposes the robot's
 > sensor readings as a live JSON API, browsable from any device on the local network.
+> The robot's state becomes visible in real time.
 
 ---
 
-## Stage 2 — Robotics
+## Stage 2 — Robotics & the Physical World
 
-*Make the robot move, sense, and react to the physical world.*
+*Make the robot sense, react, and move intelligently.*
+
+Focus:
+- Input (sensors) → Output (movement)
+- Real-world interaction
+- Feedback loops
+
+Students build systems where the robot:
+- Avoids obstacles
+- Reacts to surroundings
+- Interprets visual input
+
+> **Stage Goal:**
+> Understand how software interacts with the physical world.
 
 **Electronics basics**
 - Voltage, current, resistance — just enough to not break things
@@ -142,14 +261,26 @@ so the student can ask any follow-up question and get a grounded answer.
 - Writing a complete sense-plan-act loop
 - Logging, debugging, and testing on hardware
 
-> **Stage 2 project:** Build an obstacle-avoiding robot that also streams
-> its camera feed to a browser dashboard you wrote in Stage 1.
+> **Stage 2 mission:** Build an obstacle-avoiding robot that also streams
+> its camera feed to a browser dashboard you wrote in Stage 1. Watch the robot
+> navigate its environment in real time.
 
 ---
 
-## Stage 3 — AI & Machine Learning
+## Stage 3 — AI & Learning Systems
 
-*Teach the robot to learn from data and understand the world.*
+*Teach the robot to think and adapt.*
+
+The robot evolves from:
+- Reactive → Predictive → Autonomous
+
+Students build systems where the robot:
+- Makes decisions
+- Understands language
+- Learns from data
+
+> **Stage Goal:**
+> Understand how machines can learn and make decisions.
 
 **Machine learning foundations**
 - What is machine learning? Supervised vs unsupervised vs reinforcement
@@ -194,14 +325,27 @@ so the student can ask any follow-up question and get a grounded answer.
 - Evaluating a model: how do you know if it's teaching well?
 - How to contribute a new lesson so the coach learns it too
 
-> **Stage 3 project:** Fine-tune a small local model on a topic of your
-> choice and add it to the coach's knowledge base.
+> **Stage 3 mission:** Fine-tune a small local model on a topic of your
+> choice and add it to the coach's knowledge base. Teach the robot something new.
 
 ---
 
 ## Stage 4 — Autonomous Robot
 
-*Bring everything together. Build a robot that thinks, sees, speaks, and acts.*
+*Bring everything together into a complete system.*
+
+Students design complete behaviors:
+- Navigation
+- Interaction
+- Task execution
+
+The robot becomes:
+- Independent
+- Responsive
+- Goal-driven
+
+> **Stage Goal:**
+> Build a fully autonomous system that operates in the real world.
 
 **Full system architecture**
 - How all layers connect: sensors → perception → reasoning → action
@@ -228,6 +372,63 @@ so the student can ask any follow-up question and get a grounded answer.
 - Submitting a project to the LearningMachina community
 - Opening a pull request: how open-source collaboration works
 
-> **Stage 4 graduation project:** Design, build, and document an original
+> **Stage 4 graduation mission:** Design, build, and document an original
 > autonomous behaviour. Present it to the robot — it will ask you to explain
 > every layer of the stack.
+
+---
+
+## Missions Instead of Exercises
+
+Students do not complete abstract exercises.
+
+They complete **missions**:
+- Navigate a space
+- Follow a person
+- Respond to voice commands
+- React to environmental changes
+
+Each mission combines:
+- Programming
+- Robotics
+- AI
+
+---
+
+## Debugging Through Behavior
+
+Errors are not hidden in logs — they are visible:
+
+- Wrong logic → wrong movement
+- Sensor error → incorrect reaction
+- State → visible through lights, sound, motion
+
+This makes debugging:
+- Intuitive
+- Immediate
+- Physical
+
+---
+
+## Final Outcome
+
+By the end of the curriculum, the student can:
+
+- Program in multiple languages
+- Control real hardware
+- Build intelligent systems
+- Design autonomous behaviors
+
+Most importantly:
+
+> They understand how to turn code into real-world action.
+
+---
+
+## Philosophy Summary
+
+LearningMachina does not teach programming as an abstract skill.
+
+It teaches:
+
+> **How to give a machine behavior.**

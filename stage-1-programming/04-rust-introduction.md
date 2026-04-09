@@ -13,7 +13,7 @@ Rust delivers C-level speed with compile-time memory safety — no garbage colle
 - Async/await basics
 - How the robot's own control software is written in Rust
 
-## Example
+## Code
 
 ```rust
 // Ownership and borrowing
@@ -62,17 +62,25 @@ impl Drive for DcMotor {
 }
 ```
 
-## Exercise
+## Action
 
 1. Install Rust via `rustup` if not already present and run `cargo new robot_basics`.
 2. Write a function `celsius_to_fahrenheit(c: f32) -> f32` and call it from `main`.
 3. Implement a `Sensor` trait with a method `read(&self) -> f32`, then create a `FakeSensor` struct that always returns `42.0`.
 4. Make `read_temperature` above work on your machine and print the result.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is ownership, and why does Rust enforce it at compile time rather than at runtime?
 - What is the difference between `Option<T>` and `Result<T, E>`? Give a real example of each.
 - Why is Rust a better choice than C++ for writing safe concurrent code?
+
+## Extension
+
+Modify the Rust code to change the robot's safety behavior:
+
+1. Change the `DcMotor` to clamp speed between -1.0 and 1.0 — the robot now has built-in safety limits enforced at compile time.
+2. Add an `emergency_stop()` method that sets speed to 0 and returns a `Result` indicating whether the stop was clean — the robot can now report its own safety state.
+3. Implement a second struct that wraps `DcMotor` and adds a speed ramp (never jumping more than 0.1 per call) — the robot's movements become smooth. Rust's ownership ensures only one controller exists at a time.

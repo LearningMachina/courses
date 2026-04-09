@@ -12,7 +12,7 @@ An autonomous behaviour is a closed loop that runs without human input: the robo
 - Following a person using optical flow
 - Responding to voice commands with physical actions
 
-## Example
+## Code
 
 ```python
 # Person detection + greeting behaviour (sketch)
@@ -57,17 +57,25 @@ def optical_flow_centre(prev_gray, curr_gray):
     return max_loc
 ```
 
-## Exercise
+## Action
 
 1. Run the person-detection loop and have the robot greet the first person it sees.
 2. Implement a voice-activated Q&A loop: listen → transcribe (Whisper) → answer (Ollama) → speak (Piper).
 3. Build a simple obstacle course (chairs, boxes) and run an autonomous navigation loop through it.
 4. Implement optical flow person-following: when a person moves left, the robot turns left to track them.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - How do you handle the case where the YOLO model detects a "person" in a poster or a TV screen?
 - What is the difference between reactive behaviour and deliberative behaviour?
 - How would you test a person-following behaviour safely before running it in a room full of people?
+
+## Extension
+
+Modify the autonomous behaviors to change the robot's personality and capabilities:
+
+1. Change the person-greeting behavior: instead of generating a new greeting each time, use the same phrase — observe how the robot feels less alive. Then restore the LLM greeting and appreciate the difference.
+2. Combine two behaviors: person following + voice Q&A — the robot follows you while answering questions. Observe how behaviors compose and where conflicts arise.
+3. Add a "curious" mode: when the robot sees an unknown object (low YOLO confidence), it drives closer and uses the VLM to describe it — the robot now explores its environment with purpose.

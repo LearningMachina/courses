@@ -1,4 +1,4 @@
-# Stage 0 Project — System Status Script
+# Stage 0 Mission — System Status Script
 
 ## Goal
 
@@ -45,9 +45,9 @@ done
 - Log each status line to a file (`status.log`) as well as printing to screen.
 - Accept a command-line argument to change the interval (e.g., `./status.sh 10` for 10-second updates).
 
-## Check
+## Reflection
 
-Present your running script to the robot and explain:
+After completing the mission, reflect on what you built:
 
 1. What `#!/bin/bash` does and why it must be the first line.
 2. How the `while true` loop works and how `sleep 5` controls timing.

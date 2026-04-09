@@ -11,7 +11,7 @@ Open-source projects grow because contributors share improvements. The LearningM
 - Submitting a project to the LearningMachina community
 - Opening a pull request: how open-source collaboration works
 
-## Example
+## Code
 
 ```bash
 # Fork → branch → commit → PR workflow
@@ -42,19 +42,22 @@ Two to three sentences explaining the idea.
 ## Topics
 - Bullet list of sub-topics covered
 
-## Example
+## Code
 \`\`\`python
-# Runnable code
+# Runnable code using the robot's SDK
 \`\`\`
 
-## Exercise
-Numbered steps the student does on the robot.
+## Action
+Run the code and observe the robot's physical response.
 
-## Check
-Questions the student answers back to the robot.
+## Reflection
+Explain what changed in the robot's behavior.
+
+## Extension
+Modify the code to change the robot's behavior again.
 ```
 
-## Exercise
+## Action
 
 1. Fork the `courses` repository and clone your fork.
 2. Write a new lesson on a topic not yet covered (e.g., SLAM, behaviour trees, ROS2 actions).
@@ -62,10 +65,18 @@ Questions the student answers back to the robot.
 4. Open a pull request with a clear title and description.
 5. Respond to any review comments from the maintainers.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between a fork and a branch?
 - Why do open-source projects ask contributors to open a pull request rather than push directly to `main`?
 - What makes a good commit message, and why does it matter in a collaborative project?
+
+## Extension
+
+Modify your contribution to strengthen the community and the curriculum:
+
+1. Write a second lesson on a related topic and link it to the first — the curriculum grows, and the robot's coaching knowledge expands.
+2. Ask another student (or the robot) to review your lesson and incorporate their feedback — the robot's teaching improves through collaboration.
+3. Train the RAG coach on your new lesson and test it with 5 questions — if the robot can teach your topic accurately, you've successfully extended its mind.

@@ -12,7 +12,7 @@ DC motors spin at a speed proportional to the voltage applied to them. A motor d
 - PID control: keeping movement smooth and accurate
 - Writing a simple drive loop in Python
 
-## Example
+## Code
 
 ```
 PWM: a square wave whose duty cycle sets the average voltage.
@@ -70,17 +70,25 @@ class PID:
         return self.kp * error + self.ki * self._integral + self.kd * derivative
 ```
 
-## Exercise
+## Action
 
 1. Wire your motor driver to the Jetson according to its datasheet.
 2. Run the `drive()` example and confirm forward / turn / stop behaviour.
 3. Implement a `go_straight(duration)` function that drives forward for the given number of seconds then stops.
 4. Add a PID loop that keeps both wheels at the same speed using encoder feedback (or simulate it with random noise).
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is duty cycle, and how does 50% duty cycle at 1 kHz translate to average voltage?
 - Why does a tracked robot turn right when the left motor is faster?
 - What does each of the three PID terms (P, I, D) correct for?
+
+## Extension
+
+Modify the motor code to change how the robot moves:
+
+1. Change the PWM duty cycle from 50% to 25% and then 75% — observe the speed difference physically. The robot crawls, then rushes.
+2. Modify the PID constants: double Kp and observe oscillation, then increase Kd to dampen it — the robot's movement quality visibly changes.
+3. Write a sequence that drives forward for 2 seconds, turns 90° (one track forward, one reverse), then drives forward again — the robot navigates an L-shaped path. Timing and speed create geometry.

@@ -12,7 +12,7 @@ Deep learning uses neural networks with many layers to learn hierarchical repres
 - How the robot's YOLO detector was trained
 - Transfer learning: fine-tuning a pretrained model
 
-## Example
+## Code
 
 ```python
 import torch
@@ -53,17 +53,25 @@ Backpropagation in one sentence:
   to the error, then nudge each weight to reduce it.
 ```
 
-## Exercise
+## Action
 
 1. Build a `SensorClassifier` that takes 4 sensor readings and outputs "safe" or "obstacle" (2 classes).
 2. Generate 500 synthetic samples (random inputs, label = "obstacle" if any reading < 0.3) and train the network.
 3. Evaluate on a held-out test set and print accuracy, precision, and recall.
 4. Load MobileNetV3 and fine-tune it on a 2-class image dataset collected from the robot's camera (e.g., "clear path" vs "obstacle").
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What does a ReLU activation do, and why is it used instead of a sigmoid in hidden layers?
 - What is the vanishing gradient problem, and which architectural choices help avoid it?
 - Why does transfer learning work? What has the pretrained model already learned?
+
+## Extension
+
+Modify the neural network to change how the robot classifies its world:
+
+1. Add a third hidden layer to the `SensorClassifier` — does accuracy improve or does the model overfit? The robot's decision boundary becomes more complex.
+2. Change the transfer learning base from MobileNetV3 to a different model (e.g., ResNet18) — observe how the robot's classification speed and accuracy change. Architecture affects behavior.
+3. Train the model on images from the robot's own camera rather than a dataset — the robot now recognizes its own environment. Point it at different rooms and watch its classifications shift.

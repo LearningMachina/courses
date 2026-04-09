@@ -10,7 +10,7 @@ Individual subsystems — motors, sensors, vision — become a robot only when t
 - Writing a complete sense–plan–act loop
 - Logging, debugging, and testing on hardware
 
-## Example
+## Code
 
 ```python
 # ros2_drive_node.py — a minimal ROS2 Python node
@@ -63,7 +63,7 @@ Drive node   publishes /cmd_vel (Twist)
 Motor node   subscribes, sets PWM on hardware
 ```
 
-## Exercise
+## Action
 
 1. Install ROS2 Humble on the Jetson (if not already present).
 2. Create a ROS2 Python package and implement the `DriveNode` above.
@@ -71,10 +71,18 @@ Motor node   subscribes, sets PWM on hardware
 4. Use `ros2 topic echo` to verify messages flow correctly.
 5. Draw the node graph with `rqt_graph`.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is a ROS2 topic, and how is it different from a direct function call between two pieces of code?
 - Why is the sense–plan–act separation useful, even for a simple obstacle-avoidance robot?
 - What would you check first if a node is publishing but the subscriber is not receiving messages?
+
+## Extension
+
+Modify the ROS2 system to change the robot's integrated behavior:
+
+1. Change the obstacle threshold from 30 cm to 50 cm — the robot becomes more cautious. Try 15 cm — it becomes bold. Observe the personality shift.
+2. Add a new ROS2 node that publishes a "mood" topic based on how often obstacles are encountered — the robot's internal state becomes observable.
+3. Create a node that logs all sensor readings to a CSV file — the robot now has memory. Replay the data later and you can see exactly what the robot experienced.

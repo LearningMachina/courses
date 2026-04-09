@@ -1,4 +1,4 @@
-# Stage 2 Project — Obstacle-Avoiding Robot with Camera Stream
+# Stage 2 Mission — Obstacle-Avoiding Robot with Camera Stream
 
 ## Goal
 
@@ -39,7 +39,7 @@ Browser
 - Log each obstacle event (timestamp, distance, action taken) to a CSV file.
 - Add a `/control` endpoint so the user can override the robot from the browser.
 
-## Check
+## Reflection
 
 Demo the fully running system to the robot and explain:
 

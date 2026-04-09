@@ -13,7 +13,7 @@ A camera gives the robot a rich, high-bandwidth view of the world. OpenCV provid
 - Depth perception: stereo cameras and disparity maps
 - Running vision on the robot: CUDA acceleration on Jetson
 
-## Example
+## Code
 
 ```python
 import cv2
@@ -63,17 +63,25 @@ for box in results[0].boxes:
     print(box.cls, box.conf, box.xyxy)
 ```
 
-## Exercise
+## Action
 
 1. Capture frames from your robot's camera and display them in a window.
 2. Threshold for a brightly coloured object (use a piece of tape or a toy) and draw a bounding box around it.
 3. Print the (x, y) centre of the largest detected region and describe whether the object is left, centre, or right of the frame.
 4. Run the YOLO example on a still image and print all detected objects with confidence > 0.5.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - Why do we convert to HSV for colour detection instead of using BGR directly?
 - What is the difference between object detection and image classification?
 - What does CUDA acceleration actually do in the YOLO pipeline — which step gets faster?
+
+## Extension
+
+Modify the vision code to change what the robot sees and how it reacts:
+
+1. Change the HSV colour threshold to detect a blue object instead of red — the robot's attention shifts to different things in its environment.
+2. Add logic that prints "left", "center", or "right" based on where the detected object is in the frame — the robot now has spatial awareness it can act on.
+3. Combine YOLO detection with motor control: when a person is detected, the robot turns toward them — the robot now tracks humans. Vision becomes behavior.

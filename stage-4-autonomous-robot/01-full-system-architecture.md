@@ -11,7 +11,7 @@ An autonomous robot is a layered system: raw sensor data flows up through percep
 - Running everything offline: no cloud, no subscription
 - Profiling and optimisation: finding bottlenecks on Jetson hardware
 
-## Example
+## Code
 
 ```
 Full stack on one Jetson Orin Nano
@@ -53,17 +53,25 @@ sudo nvpmodel -m 0              # max performance mode
 sudo jetson_clocks              # lock clocks to maximum
 ```
 
-## Exercise
+## Action
 
 1. Draw a block diagram of your full robot stack, labelling every component and the data flowing between them.
 2. Use `tegrastats` while running YOLO and record GPU utilisation, memory usage, and power draw.
 3. Profile the perception pipeline with `cProfile` and identify the three most expensive function calls.
 4. Switch between Jetson power modes (`nvpmodel`) and measure the change in YOLO inference time.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What does "real-time" mean in a robotics context, and which layers of your stack must meet hard real-time constraints?
 - Why is it important to run offline with no cloud dependency? Name two scenarios where cloud reliance would fail.
 - What is the difference between latency and throughput, and which matters more for obstacle avoidance vs voice interaction?
+
+## Extension
+
+Modify the system architecture to change the robot's performance characteristics:
+
+1. Change the Jetson power mode with `nvpmodel` and re-run your YOLO benchmark — observe how the robot trades power consumption for speed. In low-power mode, it sees the world in slow motion.
+2. Add a timestamp to every layer (sensor read, perception, reasoning, motor command) and compute end-to-end latency — the robot now knows how fast it thinks. Identify the bottleneck and try to shrink it.
+3. Disable one layer (e.g., skip the LLM reasoning) and observe how the robot's behavior degrades to pure reactive control — understanding what each layer contributes makes the whole system clearer.

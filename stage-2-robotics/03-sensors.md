@@ -11,7 +11,7 @@ Sensors are how the robot perceives the world. Each type measures something diff
 - Filtering noisy sensor data (moving average, Kalman basics)
 - Reacting to the environment: obstacle avoidance
 
-## Example
+## Code
 
 ```python
 # Read an HC-SR04 ultrasonic distance sensor
@@ -68,17 +68,25 @@ def read_accel():
     return ax, ay, az
 ```
 
-## Exercise
+## Action
 
 1. Wire an HC-SR04 and print distance readings in a loop.
 2. Apply a 5-sample moving average and compare the raw vs filtered output.
 3. Write an `avoid_obstacle(threshold_cm)` function that stops the robot when something is closer than `threshold_cm`.
 4. *(Stretch)* Read accelerometer data from an I2C IMU and detect when the robot is tilted more than 15°.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What are the differences between I2C, SPI, and UART? When would you choose each?
 - Why does a moving average introduce latency, and how do you choose the window size?
 - What is the Kalman filter trying to do, conceptually, that a moving average cannot?
+
+## Extension
+
+Modify the sensor code to change how the robot perceives its environment:
+
+1. Change the moving average window from 5 to 20 samples — the robot's reactions become smoother but slower. Try 2 — it becomes twitchy. Find the sweet spot.
+2. Modify `avoid_obstacle()` to turn left when obstacles are on the right, and right when on the left (add a second sensor) — the robot now makes directional decisions.
+3. Combine the ultrasonic sensor and IMU: if the robot tilts more than 15° while driving, it should stop — the robot now has a safety reflex. Physical feedback becomes a guardian.

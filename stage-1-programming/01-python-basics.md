@@ -15,7 +15,7 @@ Python is the primary language for robotics prototyping: it is readable, has vas
 - Introduction to classes and objects
 - Error handling: `try`/`except`, writing defensive code
 
-## Example
+## Code
 
 ```python
 # Variables and types
@@ -66,17 +66,25 @@ except ValueError as e:
     print(f"That wasn't a number: {e}")
 ```
 
-## Exercise
+## Action
 
 1. Write a function `celsius_to_fahrenheit(c)` and test it with several values.
 2. Create a `Robot` class with `name`, `battery` (int, 0–100), and a method `status()` that prints a summary line.
 3. Write a loop that reads lines from a file and prints only lines that start with `#`.
 4. Wrap the file reading in a `try`/`except` so that a missing file prints a friendly error instead of a traceback.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between a list and a dictionary? Give a robotics example for each.
 - Why should you use `with open(...)` instead of `f = open(...)` followed by `f.close()`?
 - What happens when an exception is raised and there is no `try`/`except` around it?
+
+## Extension
+
+Modify the code to change the robot's behavior:
+
+1. Change the `speed` variable to a negative value — observe how the robot's reported state changes from "moving" to "reversing."
+2. Add a `battery_drain()` method to the `Motor` class that reduces speed by 10% each call — the robot's behavior now degrades over time.
+3. Create a loop that gradually increases `left.speed` from 0 to 1.0 — the robot accelerates. Then reverse it — the robot decelerates. Behavior is now a function of time.

@@ -1,4 +1,4 @@
-# Stage 3 Project — Fine-Tune a Local Model
+# Stage 3 Mission — Fine-Tune a Local Model
 
 ## Goal
 
@@ -30,7 +30,7 @@ Fine-tune a small local model on a topic of your choice and add it to the coach'
 - Publish your dataset to Hugging Face Hub.
 - Add your new lesson Markdown file to `courses/` and index it so the RAG coach can also answer questions about it.
 
-## Check
+## Reflection
 
 Present your fine-tuned model to the robot and explain:
 

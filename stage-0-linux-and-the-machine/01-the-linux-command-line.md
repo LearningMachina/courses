@@ -15,7 +15,7 @@ An operating system is the software that manages hardware and lets you run progr
 - Shell scripting basics: variables, loops, if/else in bash
 - SSH: connecting to the robot remotely from another machine
 
-## Example
+## Code
 
 ```bash
 # Navigate and explore the filesystem
@@ -38,7 +38,7 @@ for i in 1 2 3; do
 done
 ```
 
-## Exercise
+## Action
 
 Open a terminal on the robot and:
 
@@ -48,10 +48,18 @@ Open a terminal on the robot and:
 4. List the file with `ls -l` and note the permissions.
 5. Write a two-line bash script that prints the date and the current user (`whoami`), then run it.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What does `chmod 755 script.sh` do, and why would you need it before running the script?
 - What is the difference between `>` and `>>` when redirecting output?
 - Why is SSH useful for working with the robot?
+
+## Extension
+
+Now modify your script to change the robot's behavior:
+
+1. Change the loop to print every 2 seconds instead of using a fixed message — observe how the robot's output rhythm changes.
+2. Add a conditional: if the current minute is even, print "Robot is alert"; if odd, print "Robot is resting." Watch the robot's personality shift.
+3. Create a second script that runs alongside the first — the robot now has two behaviors running at once. Observe what happens when they compete for the terminal.

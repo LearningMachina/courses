@@ -12,7 +12,7 @@ The transformer architecture — built on the attention mechanism — changed AI
 - Running LLMs locally with Ollama on Jetson Orin Nano
 - Prompt engineering and system prompts
 
-## Example
+## Code
 
 ```bash
 # Install Ollama and pull a model small enough for the Jetson
@@ -52,17 +52,25 @@ Attention — intuition
   each head learning to attend to different kinds of relationships.
 ```
 
-## Exercise
+## Action
 
 1. Install Ollama, pull `gemma:2b` or `llama3.2:1b`, and have a conversation from the command line.
 2. Write a Python script that sends the robot's current sensor readings (formatted as a string) to the model and asks it to decide: forward, turn-left, turn-right, or stop.
 3. Experiment with three different system prompts and note how they change the model's tone and style.
 4. Measure the tokens-per-second throughput on the Jetson with and without GPU offloading.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What does "context window" mean, and what happens when you exceed it?
 - What is the difference between a base model and an instruction-tuned model?
 - Why does quantisation (e.g., Q4_K_M) allow a larger model to fit on the Jetson, and what is the trade-off?
+
+## Extension
+
+Modify the LLM setup to change how the robot thinks and speaks:
+
+1. Change the system prompt from a helpful assistant to a cautious safety officer — ask the same question and observe how the robot's personality and decisions change completely.
+2. Switch from `gemma:2b` to a larger model (if memory allows) or a smaller one — measure the speed vs. quality trade-off. The robot becomes either smarter-but-slower or faster-but-simpler.
+3. Feed the robot live sensor data in the prompt and ask it to narrate what it's experiencing — the robot now describes its own state in natural language. It has a voice.

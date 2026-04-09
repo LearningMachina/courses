@@ -13,7 +13,7 @@ C++ is the industry standard for performance-critical robotics code: it gives yo
 - Compilation, linking, build systems (CMake basics)
 - Writing a simple motor control program in C++
 
-## Example
+## Code
 
 ```cpp
 // motor.hpp
@@ -77,17 +77,25 @@ cmake .. && make
 ./motor_demo
 ```
 
-## Exercise
+## Action
 
 1. Compile and run the example above.
 2. Add a `stop()` method that sets speed to `0.0`.
 3. Write a free function `driveForward(Motor& left, Motor& right, float speed)` and call it from `main`.
 4. Introduce a pointer: store two `Motor` objects on the heap with `new`, use them, then `delete` them.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between passing a variable by value, by pointer, and by reference?
 - What happens if you `new` an object and never `delete` it?
 - Why do robotics projects use CMake instead of calling `g++` directly?
+
+## Extension
+
+Modify the C++ code to change the robot's motor behavior:
+
+1. Change the duty cycle in `set_speed()` to use a non-linear curve (e.g., square the input) — the robot's acceleration profile changes from linear to smooth.
+2. Add a `reverse()` method that negates the current speed — the robot can now back up.
+3. Create two `Motor` objects and write a function that makes them turn in opposite directions — the robot now spins in place. Observe the relationship between code structure and physical movement.

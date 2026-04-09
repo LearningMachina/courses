@@ -11,7 +11,7 @@ Professional robotics developers rely on a small set of tools for almost everyth
 - Python environment: what a virtual environment is and why to use one
 - Running your first Python script on the robot
 
-## Example
+## Code
 
 ```bash
 # --- Git ---
@@ -39,7 +39,7 @@ print(f"Hello from {platform.node()}!")
 print(f"Python {platform.python_version()} on {platform.system()}")
 ```
 
-## Exercise
+## Action
 
 1. Create a new Git repo called `robot-sandbox` in your home directory.
 2. Inside it, create a Python virtual environment called `.venv` and activate it.
@@ -47,10 +47,18 @@ print(f"Python {platform.python_version()} on {platform.system()}")
 4. Write a script `hello.py` that prints the robot's hostname and Python version.
 5. Add and commit both `hello.py` and a `.gitignore` that excludes `.venv/`.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What problem does a virtual environment solve? What goes wrong without one?
 - What is the difference between `git add` and `git commit`?
 - If you accidentally delete `hello.py`, how do you recover it using Git?
+
+## Extension
+
+Modify your workflow to change the robot's development behavior:
+
+1. Edit your `hello.py` to print a different message, commit the change, and then use `git log` to see both versions — the robot's history is now visible.
+2. Create a branch called `experiment`, make a change there, then switch back to `main` — observe how the robot's code can exist in two states at once.
+3. Add a second Python file that imports from the first — the robot's code now has structure and dependencies.

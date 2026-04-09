@@ -12,7 +12,7 @@ Multimodal models process more than one type of input — text, images, audio, o
 - Text-to-Speech (TTS): Piper, Kokoro, expressive voices
 - End-to-end voice interaction pipelines
 
-## Example
+## Code
 
 ```python
 # VLM: describe what the camera sees (using Ollama with llava)
@@ -70,17 +70,25 @@ def speak(text: str):
 speak("Obstacle detected. Turning right.")
 ```
 
-## Exercise
+## Action
 
 1. Pull `llava:7b` with Ollama and describe a photograph from your robot's camera.
 2. Record 3 seconds of speech, transcribe it with Whisper `tiny`, and print the result.
 3. Synthesise a short sentence with Piper and play it through the robot's speaker.
 4. Chain all three: listen → transcribe → ask VLM what it sees → speak the answer aloud.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between a VLM and a VLA, and why is a VLA harder to build?
 - Why run STT and TTS locally rather than using a cloud API?
 - What is the latency bottleneck in the listen → think → speak pipeline on Jetson hardware?
+
+## Extension
+
+Modify the multimodal pipeline to change how the robot perceives and communicates:
+
+1. Change the VLM prompt from "Describe this image" to "What obstacles do you see?" — the robot's visual understanding becomes task-specific. Same camera, different interpretation.
+2. Switch the TTS voice or speaking rate — the robot's personality changes audibly. A slow, deep voice feels calm; a fast, high voice feels urgent.
+3. Chain the full pipeline: the robot listens → transcribes → looks at the camera → describes what it sees → speaks the answer. Ask it "What's in front of you?" and experience a complete multimodal interaction.

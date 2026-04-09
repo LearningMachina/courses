@@ -12,7 +12,7 @@ Machine learning is the practice of writing programs that improve from experienc
 - Gradient descent: the engine of learning
 - Introduction to PyTorch
 
-## Example
+## Code
 
 ```python
 import torch
@@ -48,17 +48,25 @@ Train / Validation / Test split
   Test       15 % — final, one-time evaluation — never peek early!
 ```
 
-## Exercise
+## Action
 
 1. Run the PyTorch regression example and plot the predicted line against the data points (use `matplotlib`).
 2. Deliberately overfit the model (increase epochs to 5 000, reduce dataset to 3 points) and observe the validation loss rising while training loss falls.
 3. Add L2 regularisation (`weight_decay=0.01` in the optimizer) and see how it changes the overfitting.
 4. Replace `nn.Linear` with a two-layer network and compare performance.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is the difference between supervised and reinforcement learning? Give a robot example of each.
 - What does gradient descent actually do step by step?
 - Why is it cheating to evaluate your model on the training set?
+
+## Extension
+
+Modify the model to change how the robot learns:
+
+1. Change the learning rate from 0.01 to 0.1 and then 0.001 — observe how the loss curve changes. Too fast and the robot overshoots; too slow and it barely learns.
+2. Add a second input feature (e.g., battery voltage) to the model — the robot now considers more context when predicting motor speed. Does accuracy improve?
+3. Deliberately create an overfitting scenario by training for 10,000 epochs on 5 data points — then test on new data. The robot "memorized" instead of "learned." Add regularisation and observe the difference.

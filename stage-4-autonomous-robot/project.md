@@ -1,4 +1,4 @@
-# Stage 4 Graduation Project — Original Autonomous Behaviour
+# Stage 4 Graduation Mission — Original Autonomous Behaviour
 
 ## Goal
 

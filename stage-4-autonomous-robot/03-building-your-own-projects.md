@@ -11,7 +11,7 @@ Designing your own robot behaviour from scratch is the real test of everything y
 - Documenting and sharing your project
 - Writing tests for robot code: why hardware-in-the-loop testing matters
 
-## Example
+## Code
 
 ```
 Design process for a new behaviour
@@ -75,17 +75,25 @@ test_obstacle_triggers_avoidance()
 print("All tests passed")
 ```
 
-## Exercise
+## Action
 
 1. Choose a behaviour not covered in the curriculum and write a one-page design doc (goal, inputs, outputs, states).
 2. Implement it as a state machine with unit tests for all state transitions.
 3. Record a 60-second video of the robot executing the behaviour and note every failure.
 4. Fix the top two failures and re-record.
 
-## Check
+## Reflection
 
-Explain to the robot:
+After observing the robot's behavior, reflect on:
 
 - What is hardware-in-the-loop testing, and why can you not fully test a physical robot in software alone?
 - How do state machines make robot behaviour easier to reason about and debug?
 - What should a project README contain so that someone else (or you, in six months) can reproduce it?
+
+## Extension
+
+Modify your project design to push the robot's capabilities further:
+
+1. Add a new state to your state machine (e.g., SEARCHING) and implement the transitions — the robot's behavioral repertoire grows. Observe how adding states increases complexity.
+2. Write a test that simulates a sensor failure (returns `None`) and verify your state machine handles it gracefully — the robot is now robust to hardware surprises.
+3. Record your robot's state transitions over 5 minutes and plot them — you can now see the robot's "thought process" as a timeline. Where does it spend most of its time? Why?
