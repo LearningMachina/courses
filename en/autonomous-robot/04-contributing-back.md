@@ -20,11 +20,11 @@ cd courses
 git checkout -b lesson/add-kalman-filter
 
 # Create your lesson file
-cp template.md stage-2-robotics/06-kalman-filter.md
+cp template.md robotics/06-kalman-filter.md
 # ... edit it ...
 
-git add stage-2-robotics/06-kalman-filter.md
-git commit -m "Add Kalman filter lesson to Stage 2 Sensors"
+git add robotics/06-kalman-filter.md
+git commit -m "Add Kalman filter lesson to Stage 3 Sensors"
 git push origin lesson/add-kalman-filter
 
 # Open a pull request on GitHub

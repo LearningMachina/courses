@@ -7,7 +7,7 @@ Design, build, and document an original autonomous behaviour. Present it to the 
 ## Requirements
 
 **Behaviour**
-- Must be original: not a direct copy of any behaviour built in Stages 0–3.
+- Must be original: not a direct copy of any behaviour built in Stages 0–4.
 - Must integrate at least three of the five capability layers:
   1. Motor control
   2. Sensor perception (distance, vision, audio, or IMU)
@@ -30,13 +30,14 @@ Design, build, and document an original autonomous behaviour. Present it to the 
 
 ## Presentation to the Robot
 
-The robot will ask you questions across all five stages. Be ready to explain:
+The robot will ask you questions across all six stages. Be ready to explain:
 
 - **Stage 0** — How you SSH'd into the robot during development and what shell tools helped you debug.
 - **Stage 1** — Which data structures you used and why; how you handled errors gracefully.
-- **Stage 2** — How sensors are read, filtered, and fed into the control loop.
-- **Stage 3** — What AI model(s) you used, how you evaluated them, and what their failure modes are.
-- **Stage 4** — How all layers connect end-to-end; what the latency is; how you would make it better.
+- **Stage 2** — How game development concepts (real-time loops, state machines, networking) informed your design.
+- **Stage 3** — How sensors are read, filtered, and fed into the control loop.
+- **Stage 4** — What AI model(s) you used, how you evaluated them, and what their failure modes are.
+- **Stage 5** — How all layers connect end-to-end; what the latency is; how you would make it better.
 
 ## Evaluation Criteria
 

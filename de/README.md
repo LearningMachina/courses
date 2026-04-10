@@ -210,7 +210,51 @@ Jedes Konzept ist an Verhalten gebunden:
 
 ---
 
-## Stufe 2 — Robotik & die physische Welt
+## Stufe 2 — Spieleentwicklung
+
+*Baue Spiele, um Echtzeitsysteme zu meistern.*
+
+Spiele sind die Brücke zwischen Programmierung und Robotik — beides sind Echtzeitsysteme
+mit Eingabe, Zustand und Ausgabe. Schüler lernen:
+- 2D-Spiele in Python mit Pygame
+- 3D-Rendering in C++ mit OpenGL
+- Multiplayer-Netzwerk in Rust
+- Spielearchitektur-Muster (ECS, Zustandsautomaten)
+
+> **Stufenziel:**
+> Echtzeitsysteme, Rendering und vernetzten Multiplayer verstehen — Fähigkeiten,
+> die direkt auf Robotik und KI übertragbar sind.
+
+**2D-Spiele mit Python**
+- Game-Loops: Eingabe → Update → Rendern
+- Pygame-Grundlagen: Fenster, Events, Zeichnen
+- Sprites, Kollisionserkennung, einfache Physik
+- Soundeffekte, Tile-Maps, Spielzustandsverwaltung
+
+**3D-Spiele mit C++**
+- Die Grafikpipeline: Vertices → Shader → Bildschirm
+- OpenGL-Grundlagen: Fenster, Buffer, VAOs
+- GLSL-Shader: Vertex und Fragment
+- Transformationen, Kameras, Texturen, Beleuchtung
+
+**Multiplayer mit Rust**
+- Netzwerk: TCP vs UDP, Latenz, Paketverlust
+- Asynchrone Programmierung mit Tokio
+- Autoritative Server-Architektur
+- Zustandssynchronisation, Client-seitige Vorhersage
+
+**Spielearchitektur & Design**
+- Entity-Component-System (ECS) Muster
+- Spielzustandsautomaten
+- Event-Systeme, Asset-Management
+- Sprachübergreifende Integration
+
+> **Stufe-2-Mission:** Baue ein vollständiges Multiplayer-Spiel — ein Rust-Server,
+> ein Python/Pygame-Client, Echtzeit-Zustandssynchronisation und mindestens eine Spielmechanik.
+
+---
+
+## Stufe 3 — Robotik & die physische Welt
 
 *Bringe den Roboter dazu, zu fühlen, zu reagieren und sich intelligent zu bewegen.*
 
@@ -261,13 +305,13 @@ Schüler bauen Systeme, in denen der Roboter:
 - Eine vollständige Sense-Plan-Act-Schleife schreiben
 - Logging, Debugging und Testen auf Hardware
 
-> **Stufe-2-Mission:** Baue einen hindernisausweichenden Roboter, der gleichzeitig
+> **Stufe-3-Mission:** Baue einen hindernisausweichenden Roboter, der gleichzeitig
 > seinen Kamerafeed an ein Browser-Dashboard streamt, das du in Stufe 1 gebaut hast.
 > Beobachte, wie der Roboter in Echtzeit durch seine Umgebung navigiert.
 
 ---
 
-## Stufe 3 — KI & Lernsysteme
+## Stufe 4 — KI & Lernsysteme
 
 *Bringe dem Roboter bei, zu denken und sich anzupassen.*
 
@@ -325,12 +369,12 @@ Schüler bauen Systeme, in denen der Roboter:
 - Ein Modell evaluieren: Woher weiß man, ob es gut unterrichtet?
 - Wie man eine neue Lektion beiträgt, damit der Coach sie ebenfalls lernt
 
-> **Stufe-3-Mission:** Optimiere ein kleines lokales Modell auf ein Thema deiner
+> **Stufe-4-Mission:** Optimiere ein kleines lokales Modell auf ein Thema deiner
 > Wahl und füge es der Wissensbasis des Coaches hinzu. Bringe dem Roboter etwas Neues bei.
 
 ---
 
-## Stufe 4 — Autonomer Roboter
+## Stufe 5 — Autonomer Roboter
 
 *Bringe alles zu einem vollständigen System zusammen.*
 
@@ -372,7 +416,7 @@ Der Roboter wird:
 - Ein Projekt an die LearningMachina-Community einreichen
 - Einen Pull Request öffnen: Wie Open-Source-Zusammenarbeit funktioniert
 
-> **Stufe-4-Abschlussmission:** Entwirf, baue und dokumentiere ein originelles
+> **Stufe-5-Abschlussmission:** Entwirf, baue und dokumentiere ein originelles
 > autonomes Verhalten. Präsentiere es dem Roboter — er wird dich bitten, jede
 > Schicht des Stacks zu erklären.
 

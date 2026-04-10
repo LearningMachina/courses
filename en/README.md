@@ -210,7 +210,51 @@ Each concept is tied to behavior:
 
 ---
 
-## Stage 2 — Robotics & the Physical World
+## Stage 2 — Game Development
+
+*Build games to master real-time systems.*
+
+Games are the bridge between programming and robotics — both are real-time
+systems with input, state, and output. Students learn:
+- 2D games in Python with Pygame
+- 3D rendering in C++ with OpenGL
+- Multiplayer networking in Rust
+- Game architecture patterns (ECS, state machines)
+
+> **Stage Goal:**
+> Understand real-time systems, rendering, and networked multiplayer — skills
+> that transfer directly to robotics and AI.
+
+**2D games with Python**
+- Game loops: input → update → render
+- Pygame basics: windows, events, drawing
+- Sprites, collision detection, simple physics
+- Sound effects, tile maps, game state management
+
+**3D games with C++**
+- The graphics pipeline: vertices → shaders → screen
+- OpenGL basics: windows, buffers, VAOs
+- GLSL shaders: vertex and fragment
+- Transformations, cameras, textures, lighting
+
+**Multiplayer with Rust**
+- Networking: TCP vs UDP, latency, packet loss
+- Async programming with Tokio
+- Authoritative server architecture
+- State synchronisation, client-side prediction
+
+**Game architecture & design**
+- Entity-Component-System (ECS) pattern
+- Game state machines
+- Event systems, asset management
+- Cross-language integration
+
+> **Stage 2 mission:** Build a complete multiplayer game — a Rust server,
+> a Python/Pygame client, real-time state sync, and at least one game mechanic.
+
+---
+
+## Stage 3 — Robotics & the Physical World
 
 *Make the robot sense, react, and move intelligently.*
 
@@ -261,13 +305,13 @@ Students build systems where the robot:
 - Writing a complete sense-plan-act loop
 - Logging, debugging, and testing on hardware
 
-> **Stage 2 mission:** Build an obstacle-avoiding robot that also streams
+> **Stage 3 mission:** Build an obstacle-avoiding robot that also streams
 > its camera feed to a browser dashboard you wrote in Stage 1. Watch the robot
 > navigate its environment in real time.
 
 ---
 
-## Stage 3 — AI & Learning Systems
+## Stage 4 — AI & Learning Systems
 
 *Teach the robot to think and adapt.*
 
@@ -325,12 +369,12 @@ Students build systems where the robot:
 - Evaluating a model: how do you know if it's teaching well?
 - How to contribute a new lesson so the coach learns it too
 
-> **Stage 3 mission:** Fine-tune a small local model on a topic of your
+> **Stage 4 mission:** Fine-tune a small local model on a topic of your
 > choice and add it to the coach's knowledge base. Teach the robot something new.
 
 ---
 
-## Stage 4 — Autonomous Robot
+## Stage 5 — Autonomous Robot
 
 *Bring everything together into a complete system.*
 
@@ -372,7 +416,7 @@ The robot becomes:
 - Submitting a project to the LearningMachina community
 - Opening a pull request: how open-source collaboration works
 
-> **Stage 4 graduation mission:** Design, build, and document an original
+> **Stage 5 graduation mission:** Design, build, and document an original
 > autonomous behaviour. Present it to the robot — it will ask you to explain
 > every layer of the stack.
 

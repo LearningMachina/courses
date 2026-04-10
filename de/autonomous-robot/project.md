@@ -7,7 +7,7 @@ Entwirf, baue und dokumentiere ein originales autonomes Verhalten. Präsentiere 
 ## Anforderungen
 
 **Verhalten**
-- Muss originell sein: keine direkte Kopie eines in den Stufen 0–3 gebauten Verhaltens.
+- Muss originell sein: keine direkte Kopie eines in den Stufen 0–4 gebauten Verhaltens.
 - Muss mindestens drei der fünf Fähigkeitsschichten integrieren:
   1. Motorsteuerung
   2. Sensorwahrnehmung (Entfernung, Vision, Audio oder IMU)
@@ -30,13 +30,14 @@ Entwirf, baue und dokumentiere ein originales autonomes Verhalten. Präsentiere 
 
 ## Präsentation vor dem Roboter
 
-Der Roboter wird dir Fragen über alle fünf Stufen stellen. Sei bereit zu erklären:
+Der Roboter wird dir Fragen über alle sechs Stufen stellen. Sei bereit zu erklären:
 
 - **Stufe 0** — Wie du dich per SSH in den Roboter eingeloggt hast und welche Shell-Werkzeuge dir beim Debuggen geholfen haben.
 - **Stufe 1** — Welche Datenstrukturen du verwendet hast und warum; wie du Fehler elegant behandelt hast.
-- **Stufe 2** — Wie Sensoren gelesen, gefiltert und in die Regelschleife eingespeist werden.
-- **Stufe 3** — Welche KI-Modelle du verwendet hast, wie du sie evaluiert hast und was ihre Fehlermodi sind.
-- **Stufe 4** — Wie alle Schichten End-to-End verbunden sind; was die Latenz ist; wie du es besser machen würdest.
+- **Stufe 2** — Wie Spieleentwicklungskonzepte (Echtzeit-Schleifen, Zustandsautomaten, Netzwerk) dein Design beeinflusst haben.
+- **Stufe 3** — Wie Sensoren gelesen, gefiltert und in die Regelschleife eingespeist werden.
+- **Stufe 4** — Welche KI-Modelle du verwendet hast, wie du sie evaluiert hast und was ihre Fehlermodi sind.
+- **Stufe 5** — Wie alle Schichten End-to-End verbunden sind; was die Latenz ist; wie du es besser machen würdest.
 
 ## Bewertungskriterien
 

@@ -16,6 +16,7 @@ It is the **medium of learning**.
 |----------|------------|
 | 🇬🇧 English | [en/README.md](en/README.md) |
 | 🇩🇪 Deutsch | [de/README.md](de/README.md) |
+| 🇫🇷 Français | [fr/README.md](fr/README.md) |
 
 ---
 
@@ -27,13 +28,16 @@ Make the robot come alive. Linux, terminal, hardware basics — every command ha
 ### Stage 1 — Programming as Behavior
 Learn to think like a computer — by controlling a robot. Python, C++, Rust, networking.
 
-### Stage 2 — Robotics & the Physical World
+### Stage 2 — Game Development
+Build games to master real-time systems. 2D games in Python, 3D games in C++, multiplayer with Rust.
+
+### Stage 3 — Robotics & the Physical World
 Make the robot sense, react, and move. Electronics, motors, sensors, computer vision, ROS2.
 
-### Stage 3 — AI & Learning Systems
+### Stage 4 — AI & Learning Systems
 Teach the robot to think and adapt. Machine learning, deep learning, transformers, agents, multimodal AI.
 
-### Stage 4 — Autonomous Robot
+### Stage 5 — Autonomous Robot
 Bring everything together. Full system architecture, autonomous behaviors, original projects.
 
 ---
